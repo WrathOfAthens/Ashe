@@ -8,7 +8,7 @@ const fs = require('fs');
 const Discord = require('discord.js');
 const { version } = require('./package.json');
 const token = process.env.token;
-const prefix = '^';
+const prefix = process.env.prefix;
 
 const bot = new Discord.Client();
 bot.commands = new Discord.Collection();
