@@ -1,6 +1,6 @@
 /**
- * @file The index point of Ashe
- * @author Dim
+ * @file Prints the time taken to execute 'ping'
+ * @author discord.js
  */
 
 module.exports = {

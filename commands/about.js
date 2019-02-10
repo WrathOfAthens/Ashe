@@ -1,5 +1,5 @@
 /**
- * @file The index point of Ashe
+ * @file Ashe's about information
  * @author WrathOfAthens
  * @license GNU-GPLv3
  */
