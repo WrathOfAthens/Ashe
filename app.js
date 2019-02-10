@@ -8,8 +8,8 @@
 const fs = require('fs');
 const Discord = require('discord.js');
 const { version } = require('./package.json');
-const token = 'NTQzODg5MjcxNzYxNjY2MDY1.D0FZog.02j7oTk1SIAPlC7XQgziDWZuTEA';
-const prefix = '$';
+const token = process.env.token;
+const prefix = process.env.prefix;
 const upTimeStart = Date.now();
 
 const bot = new Discord.Client();
