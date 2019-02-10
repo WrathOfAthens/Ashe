@@ -9,6 +9,7 @@ const Discord = require('discord.js');
 const { version } = require('./package.json');
 const token = process.env.token;
 const prefix = process.env.prefix;
+const upTimeStart;
 
 const bot = new Discord.Client();
 bot.commands = new Discord.Collection();
@@ -29,7 +30,7 @@ for (const file of commandFiles) {
  * When the bot is ready and functioning prints app information to console
  */
 bot.on('ready', () => {
-    const upTimeStart = Date.now();
+    upTimeStart = Date.now();
     console.log(``);
     console.log(`=================\nAshe(${version}) by WrathOfAthens\nLogged in as ` +
         `${bot.user.tag} (${bot.user.id}) on ${bot.guilds.size} server(s)\nMeow!\n=================\n`);
