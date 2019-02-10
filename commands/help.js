@@ -3,7 +3,7 @@
  * @author discord.js
  */
 /** @todo Finish commenting help.js */
-const { prefix } = require('../resources/config.json');
+const { prefix } = require('../app.js');
 
 module.exports = {
 	name: 'help',
