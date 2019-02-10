@@ -1,5 +1,5 @@
 /**
- * @file The index point of Ashe
+ * @file The game of mafia
  * @author WrathOfAthens
  * @license GNU-GPLv3
  */
