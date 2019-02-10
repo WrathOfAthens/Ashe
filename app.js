@@ -4,11 +4,12 @@
  * @license GNU-GPLv3
  */
 
+// USE MAITINACE FUNCTION ON HEROKU AND TEST LOCALLY THEN USE HEROKU STAGING FOR FINAL PRODUCTION TESTING
 const fs = require('fs');
 const Discord = require('discord.js');
 const { version } = require('./package.json');
-const token = process.env.token;
-const prefix = process.env.prefix;
+const token = 'NTQzODg5MjcxNzYxNjY2MDY1.D0FZog.02j7oTk1SIAPlC7XQgziDWZuTEA';
+const prefix = '$';
 const upTimeStart = Date.now();
 
 const bot = new Discord.Client();
@@ -30,7 +31,6 @@ for (const file of commandFiles) {
  * When the bot is ready and functioning prints app information to console
  */
 bot.on('ready', () => {
-    console.log(``);
     console.log(`=================\nAshe(${version}) by WrathOfAthens\nLogged in as ` +
         `${bot.user.tag} (${bot.user.id}) on ${bot.guilds.size} server(s)\nMeow!\n=================\n`);
     bot.user.setActivity(`${prefix}help | ${bot.guilds.size} servers`);
@@ -62,7 +62,13 @@ bot.on('message', msg => {
     if(!bot.commands.has(command)) return;
 
     try {
-        bot.commands.get(command).execute(msg, args);
+        if(command === 'uptime') {
+            bot.commands.get(command).execute(msg, args, upTimeStart);
+        } else if (command === 'help') {
+            bot.commands.get(command).execute(msg, args, prefix);
+        } else {
+            bot.commands.get(command).execute(msg, args);
+        }
     } catch (error) {
         if (error instanceof TypeError) {
             msg.channel.send(`Could not find user ${args[0]}`);

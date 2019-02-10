@@ -3,13 +3,12 @@
  * @author discord.js
  */
 /** @todo Finish commenting help.js */
-const { prefix } = require('../app.js');
 
 module.exports = {
 	name: 'help',
 	description: 'List all of my commands or info about a specific command.',
 	usage: '[command name]',
-	execute(message, args) {
+	execute(message, args, prefix) {
 		const data = [];
 		const { commands } = message.client;
 
