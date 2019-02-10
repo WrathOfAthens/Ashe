@@ -4,7 +4,6 @@
  * @license GNU-GPLv3
  */
 
-// USE MAITINACE FUNCTION ON HEROKU AND TEST LOCALLY THEN USE HEROKU STAGING FOR FINAL PRODUCTION TESTING
 const fs = require('fs');
 const Discord = require('discord.js');
 const { version } = require('./package.json');
