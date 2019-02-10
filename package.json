@@ -1,0 +1,11 @@
+{
+  "name": "ashe-bot",
+  "version": "0.3.0",
+  "description": "AsheBot",
+  "main": "app.js",
+  "author": "WrathOfAthens",
+  "license": "GNU GPLv3",
+  "dependencies": {
+    "discord.js": "^11.4.2"
+  }
+}

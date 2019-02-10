@@ -1,5 +1,5 @@
 # Ashe
-A discord bot written in Node.js using the discord.js API
+A discord bot written in Node.js using the discord.js library
 
 Ashe is a personal project created to explore discord.js and node.js and its functions. It will be periodically updated as I learn more.
 
