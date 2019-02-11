@@ -10,6 +10,6 @@ module.exports = {
     description: 'Prints information about Ashe',
 	execute(msg, args) {
 		msg.author.send(`=================\nAshe(${version}) by WrathOfAthens\nLogged in as ` +
-        `${bot.user.tag} (${bot.user.id}) on ${bot.guilds.size} server(s)\nMeow!\n=================\n`)
+        `${msg.user.tag} on ${msg.guilds.size} server(s)\nMeow!\n=================\n`)
 	},
 };
