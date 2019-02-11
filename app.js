@@ -81,6 +81,8 @@ bot.on('message', async msg => {
             bot.commands.get(command).execute(msg, args, upTimeStart);
         } else if (command === 'help') {
             bot.commands.get(command).execute(msg, args, prefix);
+        } else if(command === 'about') {
+            bot.commands.get(command).execute(msg, args, bot);
         } else if (command === 'prefix') {
             bot.commands.get(command).execute(msg, args, prefix);
         } else {
