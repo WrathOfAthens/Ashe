@@ -1,0 +1,17 @@
+{
+    "tree": ["Precision", "Domination", "Sorcery", "Resolve", "Inspiration"],
+    "keystones": [
+        ["Press the Attack", "Lethal Tempo", "Fleet Footwork", "Conqueror"], 
+        ["Electrocute", "Predator", "Dark Harvest", "Hail of Blades"], 
+        ["Summon Aery", "Arcane Comet", "Phase Rush"], 
+        ["Grasp of the Undying", "Aftershock", "Guardian"],
+        ["Glacial Augment", "Kleptomancy", "Unsealed Spellbook"]
+    ],  
+    "slots":[
+        ["Overheal", "Triumph", "Presence of Mind", "Legend: Alacrity", "Legend: Tenacity", "Legend: Bloodline", "Coup de Grace", "Cut Down", "Last Stand"],
+        ["Cheap Shot", "Taste of Blood", "Sudden Impact", "Zombie Ward", "Ghost Poro", "Eyeball Collection", "Ravenous Hunter", "Ingenious Hunter", "Relentless Hunter", "Ultimate Hunter"],
+        ["Nullifying Orb"  , "Manaflow Band", "Nimbus Cloak", "Transcendence", "Celerity", "Absolute Focus", "Scorch", "Waterwalking", "Gathering Storm"],
+        ["Demolish", "Font of Life", "Shield Bash", "Conditioning", "Second Wind", "Bone Plating", "Overgrowth", "Revitalize", "Unflinching"],
+        ["Hextech Flashtraption", "Magical Footwear", "Perfect Timing", "Future's Market", "Minion Dematerializer", "Biscuit Delivery", "Cosmic Insight", "Approach Velocity", "Time Warp Tonic"]
+    ]
+}

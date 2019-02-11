@@ -6,6 +6,8 @@
   "author": "WrathOfAthens",
   "license": "GNU GPLv3",
   "dependencies": {
-    "discord.js": "^11.4.2"
+    "@keyv/mongo": "^1.1.0",
+    "discord.js": "^11.4.2",
+    "keyv": "^3.1.0"
   }
 }
