@@ -7,11 +7,11 @@
 const fs = require('fs');
 const Discord = require('discord.js');
 const { version } = require('./package.json');
-const prefix = process.env.token;
-const globalPrefix = '$'; // const prefix = process.env.prefix;
+const token = process.env.token;
+const globalPrefix = process.env.prefix;
 const upTimeStart = Date.now();
 const Keyv = require('keyv');
-const keyv = new Keyv(`${process.env.mongodb}`); // Replace with process.env.mongodb
+const keyv = new Keyv(`${process.env.mongodb}`);
 
 const bot = new Discord.Client();
 bot.commands = new Discord.Collection();
