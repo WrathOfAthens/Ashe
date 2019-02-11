@@ -7,7 +7,20 @@
 module.exports = {
 	name: 'help',
 	description: 'List all of my commands or info about a specific command.',
-	usage: '[command name]',
+	use: '[command name]',
+	/**
+	 * The help command displays all commands avalible 
+	 * to the user dynamically by creating a map of all
+	 * commands that have been reconized by the 'fs' 
+	 * function in 'app.js'
+	 * OR the user provides a command in 'args' and 
+	 * the help command displays all information in the
+	 * command, pushes it to an array then prints the text.
+	 * 
+	 * @param {Message} message 
+	 * @param {Array} args 
+	 * @param {String} prefix 
+	 */
 	execute(message, args, prefix) {
 		const data = [];
 		const { commands } = message.client;
@@ -39,7 +52,7 @@ module.exports = {
 
 		if (command.aliases) data.push(`**Aliases:** ${command.aliases.join(', ')}`);
 		if (command.description) data.push(`**Description:** ${command.description}`);
-		if (command.usage) data.push(`**Usage:** ${prefix}${command.name} ${command.usage}`);
+		if (command.use) data.push(`**Usage:** ${prefix}${command.name} ${command.use}`);
 
 		//data.push(`**Cooldown:** ${command.cooldown || 3} second(s)`);
 
