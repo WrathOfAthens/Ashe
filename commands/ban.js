@@ -18,7 +18,8 @@ module.exports = {
      * @param {Array} args 
      */
 	execute(msg, args) {
-        var member = msg.mentions.members.first();
+        const member = msg.mentions.members.first();
+        const auth = msg.channel.members.get(msg.auth.id);
         if (args.length){ 
             var reasonArr = [args[1]];
             var max = args.length;
@@ -31,6 +32,9 @@ module.exports = {
         msg.channel.send(`Banning: ${member.displayName}`).then(m => {
             if (member.bannable == false) {
                 m.edit(`Meow! I don't have permission to ban ${member.displayName}`);
+                return;
+            } else if (auth.hasPermission('KICK_MEMBER') == false) {
+                m.edit(`Meow! You don't have permission to kick ${member.displayName}`);
                 return;
             }
             member.ban(reason).then(member => {
