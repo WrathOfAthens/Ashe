@@ -19,7 +19,7 @@ module.exports = {
      */
 	execute(msg, args) {
         const member = msg.mentions.members.first();
-        const auth = msg.channel.members.get(msg.auth.id);
+        const auth = msg.channel.members.get(msg.author.id);
         if (args.length){ 
             var reasonArr = [args[1]];
             var max = args.length;
