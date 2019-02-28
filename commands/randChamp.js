@@ -5,6 +5,7 @@
  */
 const { name } = require('../assets/lol-champs.json');
 const Discord = require('discord.js');
+const randomColor = require('randomcolor');
 
 module.exports = {
 	name: 'rchamp',
@@ -25,6 +26,7 @@ module.exports = {
         var imgFile = `${name[champNo]}_Splash_Tile_0.jpg`;
 
         const exampleEmbed = new Discord.RichEmbed()
+        .setColor(`${randomColor()}`)
         .setTitle(`${name[champNo]}`)
         .attachFiles([`./assets/lol-icons/${imgFile}`, `./assets/purple_heart.png`])
         .setAuthor(`${msg.author.username}`, `${msg.author.avatarURL}`)
