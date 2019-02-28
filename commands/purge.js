@@ -14,12 +14,13 @@ module.exports = {
         if (!args[0]) return msg.channel.send(`Expecting arguments`);
         
         if (args[0] === 'enable') {
-            if (msg.author != msg.guild.ownerID) return msg.channel.send(`Only the owner can do this`);
+            console.log()
+            if (msg.author.id != msg.guild.ownerID) return msg.channel.send(`Only the owner can do this`);
 
             await keyv.set(`PURGE${msg.guild.id}`, true);
             return msg.channel.send(`Purge is now enabled.`);
         } else if (args[0] === 'disable') {
-            if (msg.author != msg.guild.ownerID) return msg.channel.send(`Only the owner can do this`);
+            if (msg.author.id != msg.guild.ownerID) return msg.channel.send(`Only the owner can do this`);
 
             await keyv.set(`PURGE${msg.guild.id}`, false);
             return msg.channel.send(`Purge is now disabled.`);
