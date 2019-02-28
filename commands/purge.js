@@ -33,7 +33,9 @@ module.exports = {
         if (purgeEnabled === true) {
             if (auth.hasPermission('MANAGE_MESSAGES') == false) return msg.channel.send(`You do not have permission to delete messages.`);
 
-            msg.channel.bulkDelete(args[0], true);
+            msg.channel.bulkDelete(args[0], true).then( msg => {
+                msg.channel.send(`${args[0]} messages deleted!`)
+            });
 
         } else {
             return msg.channel.send(`Purge is disabled.`);
