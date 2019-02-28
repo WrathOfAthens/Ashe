@@ -32,16 +32,8 @@ module.exports = {
 
         if (purgeEnabled === true) {
             if (auth.hasPermission('MANAGE_MESSAGES') == false) return msg.channel.send(`You do not have permission to delete messages.`);
-            var errorOcc = false;
-            msg.channel.bulkDelete(args[0], true).catch( error => {
-                    console.log(error);
-                    errorOcc = true;
-                });
-                if (error == false) {
-                    msg.channel.send(`${args[0]} messages deleted!`);
-                } else {
-                    msg.channel.send(`Meow! An error occured.`);
-                }
+            var error = false;
+            msg.channel.bulkDelete(args[0], true).catch(console.error);
 
             msg.channel.send(`${args[0]} messages deleted!`)
 
