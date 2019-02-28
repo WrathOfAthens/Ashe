@@ -10,7 +10,7 @@ module.exports = {
 	name: 'purge',
     description: 'Deletes 2-100 messages [MUST BE ENABLED]',
     args: '[number of messages] OR [enable] OR [disable]',
-	execute(msg, args) {
+	async execute(msg, args) {
         if (!args[0]) return msg.channel.send(`Expecting arguments`);
         
         if (args[0] === 'enable') {
