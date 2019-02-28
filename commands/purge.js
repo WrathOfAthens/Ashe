@@ -26,10 +26,15 @@ module.exports = {
             return msg.channel.send(`Purge is now disabled.`);
         }
 
+        if (args[0] < 2 || args[0] > 100) return msg.channel.send(`Must be 2-100`);
         const purgeEnabled = await keyv.get(`PURGE${msg.guild.id}`);
+        const auth = msg.channel.members.get(msg.author.id);
 
         if (purgeEnabled === true) {
-            return msg.channel.send(`Purge is enabled.`);
+            if (auth.hasPermission('MANAGE_MESSAGES') == false) return msg.channel.send(`You do not have permission to delete messages.`);
+
+            msg.channel.bulkDelete(args[0], true);
+
         } else {
             return msg.channel.send(`Purge is disabled.`);
         }
