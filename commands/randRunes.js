@@ -5,6 +5,7 @@
  */
 const {tree, keystones, slots} = require('../assets/lol-runes.json');
 const Discord = require('discord.js');
+const randomColor = require('randomcolor');
 
 module.exports = {
 	name: 'rrunes',
@@ -58,6 +59,7 @@ module.exports = {
         }
 
         const exampleEmbed = new Discord.RichEmbed()
+        .setColor(`${randomColor()}`)
         .setTitle(`${tree[firstTree]} and ${tree[secondTree]}`)
         .attachFiles([`./assets/purple_heart.png`]) // Runes maybe here
         .setAuthor(`${msg.author.username}`, `${msg.author.avatarURL}`)
